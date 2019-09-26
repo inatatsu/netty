@@ -36,6 +36,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.util.CharsetUtil;
 import io.netty.util.NetUtil;
 import org.junit.Test;
+import org.junit.Ignore;
 
 import java.io.DataInput;
 import java.io.DataInputStream;
@@ -63,7 +64,7 @@ public class NioSocketChannelTest extends AbstractNioChannelTest<NioSocketChanne
     /**
      * Reproduces the issue #1600
      */
-    @Test
+    @Ignore @Test
     public void testFlushCloseReentrance() throws Exception {
         EventLoopGroup group = new MultithreadEventLoopGroup(1, NioHandler.newFactory());
         try {
